@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="google-site-verification" content="H-3z5eSGydj0mq2gDO8XhENdFTptlGoLHkvUsr_rgJ8" />  
+  <meta name="google-site-verification" content="MSqnn_wpeQWpmBW6Hzd90DSN6kxoFLep3OnuPy_uPrQ" />
+  <title>SMA Tiga-Maret Yogyakarta</title>
+  <%= stylesheet_link_tag :all %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+  <%= javascript_include_tag :all %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+  <div class="container">
+      <div id="header"></div>
+      <div class="kop"></div>
+      <div class="nav">         
+        <div class="menu_orange"><a href="/">Home</a></div>
+        <div class="menu_blue"><a href="/about">About us</a></div>
+        <div class="menu_green"><a href="/fasilitas">Fasilitas</a></div>
+        <div class="menu_red"><a href="/psb">PSB</a></div>
+        <div class="menu_orange2"><a href="http://elearning.tiga-maret.sch.id">e-Learning</a></div>
+        <div class="menu_blue2"><a href="http://alumni.tiga-maret.sch.id">Alumni</a></div>
+        <div class="menu_green2"><a href="http://gallery.tiga-maret.sch.id">Gallery</a></div>
+        <div class="menu_red2"><a href="/contact">Contact us</a></div>          
+      </div>        
+      <div class="sheet"><%= yield %></div>
+    <div class="footer">
+        <div id="smapwrap">
+          <div class="colsitemap"><a href="/">Home</a><hr>
+            <li><a href="/articles">Berita & Event</a></li>
+			<li><a href="/announcements">Pengumuman</a></li>
+			<li><a href="/contact">Contact us</a></li>
+          </div>
+          <div class="colsitemap"><a href="/about">About us</a><hr>
+            <li><a href="/about/sambutan-kepala-sekolah">Sambutan Kepala Sekolah</a></li>
+			<li><a href="/about/identitas-sekolah">Identitas Sekolah</a></li>
+			<li><a href="/about/visi-misi-sekolah">Visi Misi Sekolah</a></li>
+			<li><a href="/about/sejarah-sekolah">Sejarah Sekolah</a></li>
+			<li><a href="/about/prestasi-dan-penghargaan">Prestasi dan Penghargaan</a></li>
+          </div>
+          <div class="colsitemap"><a href="/fasilitas">Fasilitas</a><hr>
+            <li><a href="/fasilitas/beasiswa">Beasiswa</a></li>
+			<li><a href="/fasilitas/layanan-pendukung">Layanan Pendukung</a></li>
+			<li><a href="/fasilitas/gedung-dan-ruang">Gedung dan Ruang</a></li>
+          </div>
+          <div class="colsitemap"><a href="/psb">PSB</a><hr>
+            <li><a href="/psb/mekanisme-pendaftaran">Mekanisme Pendaftaran</a></li>
+			<li><a href="http://psb.tiga-maret.sch.id/profiles/new">Daftar Online</a></li>
+			<li><a href="http://psb.tiga-maret.sch.id/profiles">Formulir Masuk</a></li>
+          </div>
+          <div class="colsitemap"><a href="http://elearning.tiga-maret.sch.id">e-Learning</a><hr>
+          </div>
+          <div class="colsitemap"><a href="http://alumni.tiga-maret.sch.id">Alumni</a><hr>
+            <li><a href="http://alumni.tiga-maret.sch.id">Buku Tamu</a></li>
+			<li><a href="http://alumni.tiga-maret.sch.id/data">Database Alumni</a></li>
+			<li><a href="http://forum.tiga-maret.sch.id">Forum</a></li>
+          </div>
+          <div class="colsitemap"><a href="http://gallery.tiga-maret.sch.id">Gallery</a><hr>
+            <li><a href="http://gallery.tiga-maret.sch.id/collections/1-kegiatan-akademik">Kegiatan Akademik</a></li>
+			<li><a href="http://gallery.tiga-maret.sch.id/collections/2-kegiatan-sosial">Kegiatan Sosial</a></li>
+          </div>
+        </div>
+        <div id="bottomleft">
+		  <table><tr><td>Best viewed with</td>
+          <td><a href="http://mozilla.com"><img src="/images/firefox-icon.png" title="Firefox" /></a></td>
+          <td><a href="http://google.com/chrome"><img src="/images/chrome-icon.png" title="Google Chrome"/></a></td>
+          <td><a href="http://opera.com"><img src="/images/opera-icon.png" title="Opera"/></a></td>
+          <td><a href="http://apple.com/safari"><img src="/images/safari-icon.png" title="Safari"/></a></td>
+          <td>in 1280 x 720 resolution.</td></tr></table>
+        </div>
+		<div id="bottomright">Copyright &copy; 2011 <a href="/">SMA Tiga Maret Yogyakarta</a></div>
+    </div>
+  </div>
+</body>
+  <script type="text/javascript">
+    $(window).load(function() {
+    $('#slider').nivoSlider({
+    effect:'fade', // Specify sets like: 'fold,fade,sliceDown'
+    slices:15, // For slice animations
+    boxCols: 8, // For box animations
+    boxRows: 4, // For box animations
+    fold: 4,
+    slicedown: 6,
+    fade: 7,    
+    animSpeed:700, // Slide transition speed
+    pauseTime:6000, // How long each slide will show
+    startSlide:0, // Set starting Slide (0 index)
+    directionNav:true, // Next & Prev navigation
+    directionNavHide:true, // Only show on hover
+    controlNav:true, // 1,2,3... navigation
+    controlNavThumbs:true, // Use thumbnails for Control Nav
+    controlNavThumbsFromRel:true, // Use image rel for thumbs
+    controlNavThumbsSearch: '/sites/4dcdbfb22084f01e93000005/theme/images/.jpg', // Replace this with...
+    controlNavThumbsReplace: '/sites/4dcdbfb22084f01e93000005/theme/images/_thumb.jpg', // ...this in thumb Image src
+    keyboardNav:true, // Use left & right arrows
+    pauseOnHover:true, // Stop animation while hovering
+    manualAdvance:false, // Force manual transitions
+    captionOpacity:0.8, // Universal caption opacity
+    prevText: 'Prev', // Prev directionNav text
+    nextText: 'Next', // Next directionNav text
+    beforeChange: function(){}, // Triggers before a slide transition
+    afterChange: function(){}, // Triggers after a slide transition
+    slideshowEnd: function(){}, // Triggers after all slides have been shown
+    lastSlide: function(){}, // Triggers when last slide is shown
+    afterLoad: function(){} // Triggers when slider has loaded
+    });
+    });
+    
+  </script>
+</html>

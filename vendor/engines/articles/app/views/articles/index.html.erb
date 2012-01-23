@@ -1,0 +1,11 @@
+<div class="contentbox"><%=raw @page[:body] %>
+  <% @articles.each do |article| %>
+    <h3><%= link_to article.judul, article_url(article) %></h3>
+	<small><%=raw article.tanggal.strftime("%A,%d %B %Y") %></small>
+	<%= truncate article.isi, :length => 200,
+        :omission => " ... #{link_to ('.selengkapnya'), article_url(article)}",
+        :preserve_html_tags => true %>
+	<hr>
+  <% end %>
+</div>
+<div class="sidebar"><%=raw @page[:side_body] %></div>

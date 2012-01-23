@@ -1,0 +1,13 @@
+
+<div class="contentbox"><%=raw @page[:body] %>
+  <%= raw @portfolio_entry.body %><br />
+  <div id='image_container'>
+    <%= image_fu @image, '600x512', :id => "imageshow" unless @image.nil? %>
+  </div>
+  <div id="thumbnails">
+    <% @portfolio_entry.images.each_with_index do |image, index| %>
+      <%= link_to_portfolio_image(@master_entry, @portfolio_entry, image, index) %>
+    <% end %>
+  </div>
+</div>
+<div class="sidebar"><%=raw @page[:side_body] %><br /></div>

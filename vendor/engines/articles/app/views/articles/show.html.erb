@@ -1,0 +1,17 @@
+<div class="contentbox"><%=raw @page[:body] %>
+  <h3><%=raw @article.judul %></h3>
+  <small><%=raw @article.tanggal.strftime("%A,%d %B %Y") %></small>
+  <p><%=raw @article.isi %></p>
+</div>
+
+<div class="sidebar"><%=raw @page[:side_body] %><br />
+  <i><b>Berita dan event lainnya:</b></i><br>
+  <div class="widget">
+    <% @articles.each do |article| %>
+      <h3><%= link_to article.judul, article_url(article) %></h3>
+	  <small><%=raw article.tanggal.strftime("%A,%d %B %Y") %></small><hr>
+    <% end %>
+  </div>
+</div>
+
+	

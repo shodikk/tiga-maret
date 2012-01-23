@@ -1,0 +1,38 @@
+<div class="contentbox">
+  <div id="nivowrapper">
+    <div id="slider" class="nivoSlider">
+      <img src="/images/gerbang.jpg" alt="gerbang" />
+	  <img src="/images/gedung.jpg" alt="gedung" />
+	  <img src="/images/lab.jpg" alt="lab" />
+	  <img src="/images/komputer.jpg" alt="komputer" />
+    </div>
+  </div>
+  <ul class="col_left">
+    <%= link_to image_tag('beritaevent.png'), articles_path %>
+	<% @articles.each do |article| %>
+	<hr>
+		<li><% link_to article do %>
+		<h3><%= article.judul %></h3>
+		<small><%=raw article.tanggal.strftime("%A,%d %B %Y") %></small>
+		<%= truncate article.isi, :length => 200,
+			:omission => " ... #{link_to ('> selengkapnya'), article_url(article), :class => "selengkapnya"}",
+			:preserve_html_tags => true %>
+		<% end %></li>
+    <% end %>
+  </ul>
+
+  <ul class="col_right">
+    <%= link_to image_tag('pengumuman.png'), announcements_path %>
+	<% @announcements.each do |announcement| %>
+	<hr>
+		<li><% link_to announcement do %>
+		<h3><%= announcement.judul %></h3>
+		<small><%=raw announcement.tanggal.strftime("%A,%d %B %Y") %></small>
+		<%= truncate announcement.isi, :length => 200,
+			:omission => " ... #{link_to ('> selengkapnya'), announcement_url(announcement), :class => "selengkapnya"}",
+			:preserve_html_tags => true %>
+		<% end %></li>
+  <% end %>
+  </ul> 
+</div>
+<div class="sidebar"><%=raw @page[:side_body] %></div>

@@ -1,0 +1,13 @@
+<div class="contentbox"><%=raw @page[:body] %></div>
+
+<div class="sidebar">
+	<ul>
+	<% @portfolio_entries.each do | portfolio | -%>
+    <li class="link">
+      <%= link_to raw("#{image_fu portfolio.title_image, '200x200' unless portfolio.title_image.nil?} #{portfolio.title}"),
+                  portfolio_path(portfolio) %>
+    </li>
+	<% end -%>
+	</ul>
+</div>
+
